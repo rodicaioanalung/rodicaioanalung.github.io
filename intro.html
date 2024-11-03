@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Probleme</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/tablou.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/tablou.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Probleme
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Probleme</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-StatisticiDescriptive">Statistici descriptive</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-Probabilitati">Probabilități</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-DistributiaNormala">Distribuția normală</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-Intervale">Intervale de încredere</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-TesteIpotezaMedie">Teste de ipoteză (medii)</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-TesteIpotezaVarianta">Teste de ipoteză (varianță)</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="probleme">
+<h1>Probleme<a class="headerlink" href="#probleme" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>Statistică inferențială asistată de calculator</p>
+</div></blockquote>
+<p><em><strong>2024-2025</strong></em></p>
+<p>Găsiți aici enunțuri de probleme de exersat; pentru nelămuriri vă rog să îmi trimiteți e-mail: rodica.lung at econ</p>
+<div class="section" id="cuprins">
+<h2>Cuprins:<a class="headerlink" href="#cuprins" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<span id="document-StatisticiDescriptive"></span><div class="tex2jax_ignore mathjax_ignore section" id="statistici-descriptive">
+<h3>Statistici descriptive<a class="headerlink" href="#statistici-descriptive" title="Permalink to this headline">#</a></h3>
+<p><strong>Problema 1</strong>: Un profesor a notat 5 teste ale elevilor cu următoarele scoruri: 78, 85, 92, 88, 81. Calculează media și mediana acestor scoruri.</p>
+<p><strong>Problema 2</strong>: Într-un sondaj, un grup de 10 persoane a raportat următoarele venituri lunare (în lei): 2000, 2500, 3000, 3500, 3000, 4000, 4500, 5000, 6000, 7000. Care este variația și abaterea standard a veniturilor?</p>
+<p><strong>Problema 3</strong>: O echipă de fotbal a marcat următoarele puncte în 6 meciuri: 1, 3, 2, 5, 4, 0. Determină asimetria și boltirea distribuției scorurilor.</p>
+<p><strong>Problema 4</strong>: Un grup de studenți a obținut următoarele note la un examen: 7, 9, 6, 8, 10, 5. Calculează media aritmetică și abaterea medie pătratică a notelor.</p>
+<p><strong>Problema 5</strong>: O companie a înregistrat următoarele vânzări pe parcursul unei săptămâni (în mii lei): 10, 15, 20, 18, 25, 30, 22. Care este mediana și varianta vânzărilor?</p>
+<p><strong>Problema 6</strong>: Un grup de 8 prieteni a mers la cinema, iar prețurile biletelor au fost: 15, 20, 15, 18, 25, 22, 20, 30. Calculează media și abaterea standard a prețurilor biletelor.</p>
+<p><strong>Problema 7</strong>: Într-un test de aptitudini, următoarele scoruri au fost obținute: 45, 55, 60, 50, 70. Determină mediana și asimetria distribuției scorurilor.</p>
+<p><strong>Problema 8</strong>: Un grup de cercetători a măsurat înălțimea a 10 copaci, obținând următoarele valori (în metri): 3.2, 4.5, 3.8, 4.0, 3.5, 4.1, 4.3, 4.6, 3.9, 4.2. Calculează media și boltirea înălțimilor.</p>
+<p><strong>Problema 9</strong>: Un student a obținut următoarele note la 5 examene: 9, 8, 7, 10, 6. Care este variația și abaterea medie pătratică a notelor?</p>
+<p><strong>Problema 10</strong>: Într-un atelier, 12 meșteșugari au realizat următoarele produse: 5, 7, 6, 8, 10, 12, 9, 11, 14, 10, 8, 7. Calculează media, mediana și varianta numărului de produse realizate.</p>
+</div>
+<span id="document-Probabilitati"></span><div class="tex2jax_ignore mathjax_ignore section" id="probabilitati">
+<h3>Probabilități<a class="headerlink" href="#probabilitati" title="Permalink to this headline">#</a></h3>
+<p><strong>Problema 1</strong>: Într-o clasă, 30 de elevi studiază matematică, 25 studiază fizică și 10 elevi studiază atât matematică, cât și fizică. Care este probabilitatea ca un elev ales la întâmplare să studieze fie matematică, fie fizică?</p>
+<p><strong>Problema 2</strong>: La un turneu de fotbal participă 40 de echipe, dintre care 15 echipe au jucători care joacă în echipe de club și 10 echipe au jucători care joacă pentru selecționata națională. Dacă 5 echipe au jucători atât în echipele de club, cât și la selecționata națională, care este probabilitatea ca o echipă aleasă la întâmplare să aibă jucători fie în echipele de club, fie la selecționata națională?</p>
+<p><strong>Problema 3</strong>: Un magazin vinde două tipuri de produse: produse electronice și accesorii. Probabilitatea de a vinde un produs electronic este de 0,6, iar probabilitatea de a vinde un accesoriu este de 0,4. Ce probabilitate există ca magazinul să vândă atât un produs electronic, cât și un accesoriu în aceeași zi?</p>
+<p><strong>Problema 4</strong>: La un examen de matematică, un student are o probabilitate de 0,7 de a răspunde corect la prima întrebare și o probabilitate de 0,8 de a răspunde corect la a doua întrebare. Ce probabilitate există ca studentul să răspundă corect la ambele întrebări?</p>
+<p><strong>Problema 5</strong>: Într-un studiu despre obiceiurile de consum, s-a constatat că 70% dintre persoanele chestionate cumpără produse bio, iar 40% dintre cei care cumpără produse bio cumpără și produse fără gluten. Care este probabilitatea ca o persoană aleasă aleatoriu să cumpere atât produse bio, cât și produse fără gluten?</p>
+<p><strong>Problema 6</strong>: La un examen de chimie, 60% dintre studenți au trecut testul de teorie, iar dintre cei care au trecut testul de teorie, 50% au trecut și testul practic. Care este probabilitatea ca un student ales aleatoriu să fi trecut atât testul de teorie, cât și testul practic?</p>
+<p><strong>Problema 7</strong>: La un spital, 80% dintre pacienți au un test pozitiv pentru o anumită boală, iar dintre aceștia, 90% au boala. 20% dintre pacienții cu test negativ nu au boala. Care este probabilitatea ca un pacient să aibă boala, dat fiind că testul său este pozitiv?</p>
+<p><strong>Problema 8</strong>: Un producător de mașini are două modele: modelul A și modelul B. 60% din mașinile vândute sunt modelul A și 40% modelul B. Probabilitatea ca modelul A să aibă un defect este de 2%, iar probabilitatea ca modelul B să aibă un defect este de 5%. Care este probabilitatea ca o mașină aleasă aleatoriu să fie modelul A, dat fiind că are un defect?</p>
+<p><strong>Problema 9</strong>: Într-o clasă, 70% dintre elevi sunt băieți și 30% sunt fete. 40% dintre băieți și 20% dintre fete participă la activități extracurriculare. Care este probabilitatea ca un elev să fie fată, dat fiind că participă la activități extracurriculare?</p>
+</div>
+<span id="document-DistributiaNormala"></span><div class="tex2jax_ignore mathjax_ignore section" id="distributia-normala">
+<h3>Distribuția normală<a class="headerlink" href="#distributia-normala" title="Permalink to this headline">#</a></h3>
+<p><strong>Problema 1</strong>: Într-o fabrică, greutatea unui produs are o distribuție normală cu o medie de 50 kg și o deviație standard de 5 kg. Care este probabilitatea ca un produs ales aleatoriu să aibă o greutate mai mică de 47 kg?</p>
+<p><strong>Problema 2</strong>: Într-un studiu despre înălțimea bărbaților, s-a constatat că înălțimea are o medie de 175 cm și o deviație standard de 10 cm. Care este probabilitatea ca un bărbat ales la întâmplare să aibă o înălțime între 170 cm și 180 cm? (se presupune ca înălțimea urmează o distribuție normală)</p>
+<p><strong>Problema 3</strong>: Timpul mediu de așteptare într-un restaurant este distribuit normal cu o medie de 12 minute și o deviație standard de 3 minute. Care este probabilitatea ca un client să aștepte mai mult de 15 minute?</p>
+<p><strong>Problema 4</strong>: La un test standardizat, scorurile au o medie de 80 puncte și o deviație standard de 12 puncte. Care este probabilitatea ca un elev să obțină un scor mai mic de 70 puncte? (se presupune că scorurile urmează o distribuție normală)</p>
+<p><strong>Problema 5</strong>: Un fabricant de anvelope știe că durata de viață a anvelopelor sale este distribuită normal cu o medie de 60.000 km și o deviație standard de 8.000 km. Care este probabilitatea ca o anvelopă să dureze între 55.000 km și 65.000 km?</p>
+<p><strong>Problema 6</strong>: Greutatea medie a unui măr este distribuită normal, cu o medie de 150 g și o deviație standard de 20 g. Care este probabilitatea ca un măr ales aleatoriu să cântărească mai mult de 160 g?</p>
+<p><strong>Problema 7</strong>: La un concurs de gătit, timpul mediu de gătire este distribuit normal cu o medie de 45 de minute și o deviație standard de 10 minute. Care este probabilitatea ca un concurent să termine gătitul în mai puțin de 40 de minute?</p>
+<p><strong>Problema 8</strong>: Într-un studiu asupra scorurilor la un examen, media este de 75 puncte, cu o deviație standard de 5 puncte. Care este probabilitatea ca un student să obțină un scor între 70 și 80 puncte? (se presupune că scorurile urmează o distribuție normală)</p>
+<p><strong>Problema 9</strong>: Timpul mediu de livrare pentru o companie de curierat este distribuit normal, cu o medie de 24 de ore și o deviație standard de 6 ore. Care este probabilitatea ca un pachet să fie livrat în mai puțin de 18 ore?</p>
+<p><strong>Problema 10</strong>: Într-o cercetare despre consumul de apă, s-a observat că media este de 200 litri pe săptămână, cu o deviație standard de 30 litri. Care este probabilitatea ca o gospodărie să consume între 180 și 240 litri pe săptămână? (se presupune că consumul de apă urmează o distribuție normală)</p>
+</div>
+<span id="document-Intervale"></span><div class="tex2jax_ignore mathjax_ignore section" id="intervale-de-incredere">
+<h3>Intervale de încredere<a class="headerlink" href="#intervale-de-incredere" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p>Pentru următoarele probleme se consideră că populația e normal distribuită:</p>
+</div></blockquote>
+<p><strong>Problema 1</strong>: Un cercetător a măsurat timpul de reacție al 30 de studenți la un test. Timpul mediu de reacție a fost de 250 ms, cu o deviație standard de 50 ms. Calculează intervalul de încredere de 95% pentru timpul mediu de reacție al populației.</p>
+<p><strong>Problema 2</strong>: O companie a realizat un sondaj în rândul angajaților dintr-un domeniu de nișă, și a constatat că salariul mediu anual al unui eșantion de 50 de angajați este de 40.000 lei, cu o deviație standard de 8.000 lei. Determină intervalul de încredere de 99% pentru salariul mediu anual al tuturor angajaților pe acel domeniu.</p>
+<p><strong>Problema 3</strong>: Într-un studiu privind consumul de apă al gospodăriilor, un eșantion de 25 de gospodării a avut un consum mediu de 150 litri pe zi, cu o deviație standard de 30 litri. Calculați intervalul de încredere de 90% pentru consumul mediu de apă al tuturor gospodăriilor din oraș.</p>
+<p><strong>Problema 4</strong>: Un grup de cercetători a studiat greutatea medie a unei specii de pește. Într-un eșantion de 40 de pești, greutatea medie a fost de 2,5 kg, cu o deviație standard de 0,5 kg. Găsește intervalul de încredere de 95% pentru greutatea medie a populației.</p>
+<p><strong>Problema 5</strong>: Un profesor de matematică a înregistrat notele la un test pentru 60 de elevi și a obținut o medie de 7,5 de puncte, cu o deviație standard de 0.10 puncte. Calculează intervalul de încredere de 95% pentru notele medii al elevilor din clasă.</p>
+<p><strong>Problema 6</strong>: Un cercetător a efectuat un studiu asupra înălțimii medii a elevilor dintr-o școală. Știm că varianța înălțimii este de 64 cm², și că un eșantion de 100 de elevi a avut o înălțime medie de 160 cm. Calculează intervalul de încredere de 95% pentru înălțimea medie a tuturor elevilor din școală.</p>
+<p><strong>Problema 7</strong>: O companie analizează durata medie de viață a unui tip de baterie. Varianța duratei de viață este cunoscută și este de 144 luni. Într-un eșantion de 36 de baterii, durata medie de viață observată a fost de 24 luni. Determină intervalul de încredere de 99% pentru durata medie de viață a bateriilor.</p>
+<p><strong>Problema 8</strong>: Un studiu despre temperatura medie a apei într-un lac arată că, dintr-un eșantion de 50 de măsurători, temperatura medie a fost de 15°C. Varianța temperaturii este cunoscută și este de 4°C². Calculează intervalul de încredere de 90% pentru temperatura medie a apei din lac.</p>
+<p><strong>Problema 9</strong>: O firmă a analizat greutatea medie a unui produs alimentar. Cu o varianta a greutății de 25 g², un eșantion de 64 de produse a avut o greutate medie de 200 g. Găsește intervalul de încredere de 95% pentru greutatea medie a tuturor produselor.</p>
+<p><strong>Problema 10</strong>: Un profesor a evaluat performanțele elevilor la un test standardizat. Varianta scorurilor este de 36 puncte², iar dintr-un eșantion de 49 de elevi, scorul mediu a fost de 82 puncte. Calculează intervalul de încredere de 95% pentru scorul mediu al tuturor elevilor care au susținut testul.</p>
+</div>
+<span id="document-TesteIpotezaMedie"></span><div class="tex2jax_ignore mathjax_ignore section" id="teste-de-ipoteza-medii">
+<h3>Teste de ipoteză (medii)<a class="headerlink" href="#teste-de-ipoteza-medii" title="Permalink to this headline">#</a></h3>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 1: Evaluarea greutății medii a pungilor de zahăr</p>
+</div></blockquote>
+<p>Un producător de zahăr dorește să se asigure că greutatea medie a pungilor de zahăr este de 1 kg. Din datele anterioare, se știe că varianța greutății pungilor este de <span class="math notranslate nohighlight">\(0,01\)</span> kg². Un eșantion de 40 de pungi este selectat, iar greutatea medie a eșantionului este de 0,98 kg.</p>
+<p>Se poate concluziona că greutatea medie a pungilor este diferită de 1 kg? Presupuneți că greutatea pungilor este normal distribuită.</p>
+<blockquote>
+<div><p>Problema 2: Verificarea timpului mediu de așteptare într-o clinică</p>
+</div></blockquote>
+<p>O clinică dorește să mențină timpul mediu de așteptare al pacienților sub 20 de minute. Din studiile anterioare, se știe că varianța timpului de așteptare este de 16 minute². Managerul clinicii măsoară timpul de așteptare pentru un eșantion de 50 de pacienți, obținând o medie de 21,5 minute.</p>
+<p>Poate managerul clinicii să concluzioneze că timpul mediu de așteptare depășește 20 de minute? Se consideră că distribuția timpului de așteptare este normală.</p>
+<blockquote>
+<div><p>Problema 3: Calitatea producției de suc într-o fabrică</p>
+</div></blockquote>
+<p>O fabrică de sucuri dorește să se asigure că recipientele sale conțin în medie (exact) 500 ml de suc. Din istoricul producției, se cunoaște că varianța volumului este de <span class="math notranslate nohighlight">\(4\)</span> ml². Un eșantion de 30 de recipiente este verificat, iar media eșantionului este de 498 ml.</p>
+<p>Este această diferență semnificativă din punct de vedere statistic? Presupuneți că volumul de suc este normal distribuit.</p>
+<blockquote>
+<div><p>Problema 4: Evaluarea nivelului mediu de colesterol la o populație</p>
+</div></blockquote>
+<p>Un medic dorește să determine dacă nivelul mediu de colesterol într-o populație specifică este mai mare de 200 mg/dl. Din datele anterioare, se știe că varianța nivelului de colesterol este de 225 mg²/dl. Medicul testează un eșantion de 100 de persoane și obține un nivel mediu de colesterol de 205 mg/dl.</p>
+<p>Poate medicul concluziona că nivelul mediu de colesterol în populație este semnificativ mai mare decât 200 mg/dl? Se presupune că nivelul de colesterol este normal distribuit.</p>
+<blockquote>
+<div><p>Problema 5: Timpul mediu de livrare al unui serviciu de curierat</p>
+</div></blockquote>
+<p>O companie de curierat susține că timpul mediu de livrare a coletelor este de 3 zile. Din datele istorice, compania cunoaște că varianța timpului de livrare este de <span class="math notranslate nohighlight">\(0,25\)</span> zile². Un eșantion de 36 de livrări este analizat, iar media eșantionului este de 3,2 zile.</p>
+<p>Este această diferență semnificativă? Presupuneți că timpul de livrare este normal distribuit.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 1: Evaluarea conținutului mediu de cofeină într-o cafea la o cafenea</p>
+</div></blockquote>
+<p>O cafenea susține că fiecare cafea servită conține în medie 150 mg de cofeină. Un grup de cercetători dorește să verifice această afirmație și colectează un eșantion de 10 cafele. Conținutul mediu de cofeină în eșantion este de 145 mg, iar abaterea medie pătratică  a eșantionului este de 8 mg.</p>
+<p>Se poate concluziona că media conținutului de cofeină diferă semnificativ de 150 mg? Se presupune că distribuția conținutului de cofeină este normală.</p>
+<blockquote>
+<div><p>Problema 2: Determinarea nivelului mediu de satisfacție a clienților unui hotel</p>
+</div></blockquote>
+<p>Un hotel de lux susține că nivelul mediu de satisfacție al clienților săi este de 8,5 (pe o scară de la 1 la 10). Pentru a verifica acest lucru, un eșantion de 45 de clienți este intervievat, rezultând o satisfacție medie de 8,2 și o abatere medie pătratică  de 1,1.</p>
+<p>Poate fi această diferență considerată semnificativă? Presupuneți că nivelul de satisfacție este normal distribuit.</p>
+<blockquote>
+<div><p>Problema 3: Compararea timpului mediu de somn la o populație de studenți</p>
+</div></blockquote>
+<p>Un studiu anterior a stabilit că studenții unei universități dorm în medie 7 ore pe noapte. Un cercetător dorește să verifice dacă acest timp mediu s-a schimbat și colectează un eșantion de 35 studenți. Media duratei de somn în eșantion este de 6,6 ore, cu o abatere medie pătratică  de 0,9 ore.</p>
+<p>Poate cercetătorul concluziona că durata medie de somn este diferită de 7 ore? Se consideră că durata de somn este normal distribuită.</p>
+<blockquote>
+<div><p>Problema 4: Calitatea apei potabile într-o zonă rurală</p>
+</div></blockquote>
+<p>Într-o zonă rurală, concentrația maximă acceptată de nitrați în apa potabilă este de 10 mg/L. Un specialist în sănătate publică suspectează că nivelul mediu de nitrați depășește această valoare și prelevează un eșantion de 12 probe de apă. Media concentrației de nitrați este de 10,5 mg/L, cu o abatere medie pătratică  de 0,6 mg/L.</p>
+<p>Există suficiente dovezi pentru a concluziona că nivelul mediu de nitrați este mai mare decât 10 mg/L? Se presupune că nivelul de nitrați este normal distribuit.</p>
+<blockquote>
+<div><p>Problema 5: Îmbunătățirea performanței angajaților după un program de instruire</p>
+</div></blockquote>
+<p>O companie își propune să îmbunătățească performanța angajaților săi, presupunând că aceștia finalizează în mod obișnuit un anumit tip de sarcină în 50 de minute. După implementarea unui nou program de instruire, compania măsoară durata medie necesară pentru a completa sarcina pentru eșantion de 46 angajați, obținând o medie de 47 de minute și o abatere medie pătratică  de 4 minute.</p>
+<p>Poate compania concluziona că noul program de instruire a redus semnificativ timpul mediu necesar pentru finalizarea sarcinii? Se presupune că timpii de finalizare a sarcinii sunt normal distribuiți.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 1: Compararea înălțimii medii între bărbați și femei într-o universitate</p>
+</div></blockquote>
+<p>Un cercetător dorește să afle dacă există o diferență semnificativă între înălțimea medie a bărbaților și femeilor dintr-o universitate. Eșantioanele sunt selectate astfel:</p>
+<ul class="simple">
+<li><p><strong>Bărbați</strong>: 40 de studenți, media eșantionului <span class="math notranslate nohighlight">\( \tilde{x}_1 = 175 \)</span> cm, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_1 = 6 \)</span> cm.</p></li>
+<li><p><strong>Femei</strong>: 38 de studente, media eșantionului <span class="math notranslate nohighlight">\( \tilde{x}_2 = 170 \)</span> cm, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_2 = 6 \)</span> cm.</p></li>
+</ul>
+<p>Se poate concluziona că există o diferență semnificativă între înălțimea medie a bărbaților și femeilor? Se presupune că înălțimile sunt normal distribuite și au varianțe egale.</p>
+<blockquote>
+<div><p>Problema 2: Evaluarea timpului mediu de finalizare a unui test între două grupe de elevi</p>
+</div></blockquote>
+<p>Un profesor dorește să verifice dacă există o diferență în timpul mediu de finalizare a unui test între două grupe de elevi, după ce aceștia au studiat din surse diferite.</p>
+<ul class="simple">
+<li><p><strong>Grupa A</strong>: 35 de elevi, timpul mediu de finalizare <span class="math notranslate nohighlight">\( \tilde{x}_1 = 45 \)</span> minute, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_1 = 5.1 \)</span> minute.</p></li>
+<li><p><strong>Grupa B</strong>: 35 de elevi, timpul mediu de finalizare <span class="math notranslate nohighlight">\( \tilde{x}_2 = 48 \)</span> minute, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_2 = 4.8 \)</span> minute.</p></li>
+</ul>
+<p>Există o diferență semnificativă între timpii medii de finalizare a testului între cele două grupe? Presupuneți că timpii de finalizare sunt normal distribuiți și au varianțe egale.</p>
+<blockquote>
+<div><p>Problema 3: Compararea efectului a două tratamente asupra tensiunii arteriale</p>
+</div></blockquote>
+<p>Un medic dorește să compare efectul a două tratamente diferite asupra scăderii tensiunii arteriale. Fiecare tratament este administrat unui grup separat de pacienți, iar rezultatele sunt următoarele:</p>
+<ul class="simple">
+<li><p><strong>Grupul 1</strong>: 15 pacienți, scăderea medie a tensiunii arteriale <span class="math notranslate nohighlight">\( \tilde{x}_1 = 12 \)</span> mmHg, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_1 = 3 \)</span> mmHg.</p></li>
+<li><p><strong>Grupul 2</strong>: 15 pacienți, scăderea medie a tensiunii arteriale <span class="math notranslate nohighlight">\( \tilde{x}_2 = 10 \)</span> mmHg, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_2 = 3 \)</span> mmHg.</p></li>
+</ul>
+<p>Poate medicul concluziona că există o diferență semnificativă între efectele celor două tratamente? Se presupune că scăderea tensiunii arteriale este normal distribuită și că ambele grupuri au varianțe egale.</p>
+<blockquote>
+<div><p>Problema 4: Salariul mediu lunar al angajaților din două departamente</p>
+</div></blockquote>
+<p>Un manager de resurse umane dorește să afle dacă există o diferență semnificativă între salariul mediu lunar al angajaților din departamentul de Marketing și departamentul de IT.</p>
+<ul class="simple">
+<li><p><strong>Marketing</strong>: 20 de angajați, salariul mediu <span class="math notranslate nohighlight">\( \tilde{x}_1 = 3500 \)</span> RON, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_1 = 380 \)</span> RON.</p></li>
+<li><p><strong>IT</strong>: 20 de angajați, salariul mediu <span class="math notranslate nohighlight">\( \tilde{x}_2 = 3800 \)</span> RON, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_2 = 360 \)</span> RON.</p></li>
+</ul>
+<p>Poate managerul concluziona că există o diferență semnificativă între salariile medii ale celor două departamente? Se presupune că salariile sunt normal distribuite și au varianțe egale.</p>
+<blockquote>
+<div><p>Problema 5: Performanța studenților la un test de matematică în funcție de metoda de predare</p>
+</div></blockquote>
+<p>Un profesor dorește să compare performanța studenților la un test de matematică între două clase care au fost instruite folosind metode diferite.</p>
+<ul class="simple">
+<li><p><strong>Metoda tradițională</strong>: 18 studenți, scorul mediu <span class="math notranslate nohighlight">\( \tilde{x}_1 = 75 \)</span>, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_1 = 9 \)</span>.</p></li>
+<li><p><strong>Metoda interactivă</strong>: 20 de studenți, scorul mediu <span class="math notranslate nohighlight">\( \tilde{x}_2 = 82 \)</span>, abaterea medie pătratică  <span class="math notranslate nohighlight">\( s_2 = 10 \)</span>.</p></li>
+</ul>
+<p>Se poate considera că metoda de predare a avut un impact semnificativ asupra performanței studenților? Presupuneți că scorurile testului sunt normal distribuite și au varianțe egale.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 1: Compararea salariilor între două departamente într-o companie</p>
+</div></blockquote>
+<p>Un manager de resurse umane dorește să compare salariile medii din două departamente diferite (Vânzări și Marketing) pentru a vedea dacă există o diferență semnificativă între acestea. Se cunoaște că salariile din fiecare departament sunt normal distribuite.</p>
+<ul class="simple">
+<li><p><strong>Vânzări</strong>: eșantion de 20 de angajați, salariul mediu de 4000 lei și abaterea medie pătratică  de 600 lei.</p></li>
+<li><p><strong>Marketing</strong>: eșantion de 15 angajați, salariul mediu de 4500 lei și abaterea medie pătratică  de 750 lei.</p></li>
+</ul>
+<p>Poate managerul să concluzioneze că există o diferență semnificativă între salariile medii ale celor două departamente? Presupuneți că populațiile  au varianțe inegale.</p>
+<blockquote>
+<div><p>Problema 2: Diferența în nivelul de stres între două profesii</p>
+</div></blockquote>
+<p>Un psiholog studiază nivelul de stres al angajaților din două profesii diferite: IT și Medicină, pentru a afla dacă există o diferență semnificativă între acestea. Se presupune că nivelul de stres este normal distribuit în ambele grupuri.</p>
+<ul class="simple">
+<li><p><strong>IT</strong>: eșantion de 25 de angajați, nivel mediu de stres de 55 (pe o scară de la 1 la 100) și abaterea medie pătratică  de 8.</p></li>
+<li><p><strong>Medicină</strong>: eșantion de 20 de angajați, nivel mediu de stres de 62 și abaterea medie pătratică  de 10.</p></li>
+</ul>
+<p>Se poate concluziona că există o diferență semnificativă între nivelurile de stres ale angajaților din cele două profesii? Presupuneți că populațiile  au varianțe inegale.</p>
+<blockquote>
+<div><p>Problema 3: Compararea consumului mediu de combustibil între două tipuri de autoturisme</p>
+</div></blockquote>
+<p>Un cercetător auto dorește să compare consumul de combustibil între două modele de autoturisme (Model X și Model Y) pentru a vedea dacă există o diferență semnificativă în consumul mediu. Se știe că distribuția consumului de combustibil este normală pentru ambele modele.</p>
+<ul class="simple">
+<li><p><strong>Model X</strong>: eșantion de 38 autoturisme, consum mediu de 6,8 litri/100 km și abaterea medie pătratică  de 0,9 litri.</p></li>
+<li><p><strong>Model Y</strong>: eșantion de 32 autoturisme, consum mediu de 7,4 litri/100 km și abaterea medie pătratică  de 1,1 litri.</p></li>
+</ul>
+<p>Poate cercetătorul concluziona că există o diferență semnificativă între consumurile medii de combustibil ale celor două modele? Presupuneți că populațiile au varianțe inegale.</p>
+<blockquote>
+<div><p>Problema 4: Performanța elevilor în două școli diferite</p>
+</div></blockquote>
+<p>Un inspector școlar dorește să compare performanțele academice ale elevilor din două școli diferite (Școala A și Școala B) folosind scorurile obținute la un test standardizat. Se cunoaște că scorurile sunt normal distribuite în ambele școli.</p>
+<ul class="simple">
+<li><p><strong>Școala A</strong>: eșantion de 30 de elevi, scor mediu de 78 puncte și abaterea medie pătratică  de 6 puncte.</p></li>
+<li><p><strong>Școala B</strong>: eșantion de 25 de elevi, scor mediu de 82 puncte și abaterea medie pătratică  de 7 puncte.</p></li>
+</ul>
+<p>Inspectorul poate concluziona că există o diferență semnificativă între mediile scorurilor celor două școli? Presupuneți că populațiile  au varianțe inegale.</p>
+<blockquote>
+<div><p>Problema 5: Compararea timpului mediu de reacție între două grupe de vârstă</p>
+</div></blockquote>
+<p>Un psiholog dorește să compare timpul mediu de reacție între două grupe de vârstă (tineri și vârstnici) pentru a observa dacă există diferențe semnificative în performanță. Se cunoaște că timpul de reacție este normal distribuit în ambele grupe.</p>
+<ul class="simple">
+<li><p><strong>Grupa de tineri (18-30 ani)</strong>: eșantion de 55 persoane, timpul mediu de reacție de 250 milisecunde și abaterea medie pătratică  de 30 milisecunde.</p></li>
+<li><p><strong>Grupa de vârstnici (60+ ani)</strong>: eșantion de 62 persoane, timpul mediu de reacție de 310 milisecunde și abaterea medie pătratică  de 40 milisecunde.</p></li>
+</ul>
+<p>Poate psihologul să concluzioneze că există o diferență semnificativă între timpii de reacție medii ai celor două grupe de vârstă? Presupuneți că populațiile sunt normal distribuite și au varianțe inegale.</p>
+<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">Pentru</span> <span class="pre">următoarele</span> <span class="pre">cinci</span> <span class="pre">probleme</span> <span class="pre">se</span> <span class="pre">consideră</span> <span class="pre">că</span> <span class="pre">datele</span> <span class="pre">sunt</span> <span class="pre">normal</span> <span class="pre">distribuite.</span> </code></p>
+<blockquote>
+<div><p>Problema 1</p>
+</div></blockquote>
+<p><strong>Context:</strong> Un cercetător dorește să afle dacă o nouă metodă de învățare a limbilor străine este mai eficientă decât metoda clasică. Zece studenți participă la un test înainte și după aplicarea metodei noi.</p>
+<p><strong>Date:</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Student</p></th>
+<th class="head"><p>Scor înainte</p></th>
+<th class="head"><p>Scor după</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>70</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>65</p></td>
+<td><p>68</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>80</p></td>
+<td><p>85</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>90</p></td>
+<td><p>93</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>75</p></td>
+<td><p>78</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>85</p></td>
+<td><p>89</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>60</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>72</p></td>
+<td><p>76</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>78</p></td>
+<td><p>81</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>88</p></td>
+<td><p>92</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Întrebare:</strong> Este noua metodă de învățare semnificativ mai eficientă?</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 2</p>
+</div></blockquote>
+<p><strong>Context:</strong> Un antrenor de fitness dorește să vadă dacă un program intensiv de antrenament de 4 săptămâni crește forța fizică a participanților. El măsoară greutatea maximă ridicată de fiecare participant înainte și după program pentru zece persoane.</p>
+<p><strong>Date:</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Participant</p></th>
+<th class="head"><p>Greutate (kg) înainte</p></th>
+<th class="head"><p>Greutate (kg) după</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>50</p></td>
+<td><p>55</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>60</p></td>
+<td><p>65</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>55</p></td>
+<td><p>58</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>70</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>80</p></td>
+<td><p>83</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>65</p></td>
+<td><p>68</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>85</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>55</p></td>
+<td><p>59</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>62</p></td>
+<td><p>67</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>78</p></td>
+<td><p>81</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Întrebare:</strong> Programul de antrenament a crescut semnificativ forța fizică a participanților?</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 3</p>
+</div></blockquote>
+<p><strong>Context:</strong> O companie lansează un nou design pentru website-ul său și dorește să afle dacă timpul mediu petrecut de utilizatori pe pagină a crescut odată cu noua versiune. Zece utilizatori sunt testați pe ambele versiuni ale site-ului.</p>
+<p><strong>Date:</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Utilizator</p></th>
+<th class="head"><p>Timp (minute) vechi</p></th>
+<th class="head"><p>Timp (minute) nou</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>4.5</p></td>
+<td><p>5.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>3.8</p></td>
+<td><p>4.2</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>5.1</p></td>
+<td><p>5.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>6.0</p></td>
+<td><p>6.5</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>4.9</p></td>
+<td><p>5.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>5.3</p></td>
+<td><p>5.9</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>3.6</p></td>
+<td><p>4.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>5.0</p></td>
+<td><p>5.5</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>4.3</p></td>
+<td><p>4.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>4.7</p></td>
+<td><p>5.3</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Întrebare:</strong> A crescut semnificativ timpul petrecut de utilizatori pe noua versiune a site-ului?</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 4</p>
+</div></blockquote>
+<p><strong>Context:</strong> O școală vrea să determine dacă o aplicație de meditație ajută la scăderea nivelului de stres al elevilor în timpul examenelor. Nivelul de stres este măsurat înainte și după utilizarea aplicației pentru zece elevi.</p>
+<p><strong>Date:</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Elev</p></th>
+<th class="head"><p>Nivel de stres înainte</p></th>
+<th class="head"><p>Nivel de stres după</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>78</p></td>
+<td><p>65</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>82</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>75</p></td>
+<td><p>60</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>85</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>90</p></td>
+<td><p>75</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>80</p></td>
+<td><p>68</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>88</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>78</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>83</p></td>
+<td><p>69</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>79</p></td>
+<td><p>66</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Întrebare:</strong> Aplicatia de meditație a redus semnificativ nivelul de stres al elevilor?</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 5</p>
+</div></blockquote>
+<p><strong>Context:</strong> O firmă de software dorește să afle dacă un nou algoritm de compresie a datelor reduce dimensiunea fișierelor mai eficient decât cel vechi. Pentru un set de fișiere de test, se măsoară dimensiunea fișierului înainte și după compresie cu ambii algoritmi.</p>
+<p><strong>Date:</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fișier</p></th>
+<th class="head"><p>Dimensiune vechi (MB)</p></th>
+<th class="head"><p>Dimensiune nou (MB)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>4.5</p></td>
+<td><p>4.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>5.0</p></td>
+<td><p>4.6</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>6.2</p></td>
+<td><p>5.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>3.8</p></td>
+<td><p>3.4</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>5.5</p></td>
+<td><p>5.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>4.7</p></td>
+<td><p>4.2</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>6.0</p></td>
+<td><p>5.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>4.9</p></td>
+<td><p>4.4</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>5.2</p></td>
+<td><p>4.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>4.3</p></td>
+<td><p>3.9</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Întrebare:</strong> Algoritmul nou reduce dimensiunea fișierelor semnificativ mai mult decât cel vechi?</p>
+<hr class="docutils" />
+</div>
+<span id="document-TesteIpotezaVarianta"></span><div class="tex2jax_ignore mathjax_ignore section" id="teste-de-ipoteza-varianta">
+<h3>Teste de ipoteză (varianță)<a class="headerlink" href="#teste-de-ipoteza-varianta" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p>Problema 1: Controlul consistenței umidității în procesul de producție de hârtie</p>
+</div></blockquote>
+<p>O fabrică de hârtie are ca specificație o  abatere medie pătratică  a umidității de 1,5% în timpul producției pentru a asigura calitatea produsului. Inginerii fabricii cred că recent varianța umidității ar putea fi mai mare, afectând astfel calitatea finală. Ei colectează un eșantion de 20 de foi de hârtie și măsoară umiditatea pentru fiecare. Eșantionul prezintă o varianță de 3%².</p>
+<p>Verificați dacă varianța umidității este semnificativ diferită de valoarea specificată, presupunând că distribuția umidității este normală, folosind un nivel de încredere de 95%.</p>
+<blockquote>
+<div><p>Problema 2: Consistența dimensiunii firului de ață într-o fabrică textilă</p>
+</div></blockquote>
+<p>O fabrică textilă produce fire de ață cu diametrul mediu specificat, iar  abaterea medie pătratică  acceptată pentru diametru este de 0,02 mm, ceea ce corespunde unei varianțe de 0,0004 mm². Pentru a verifica dacă standardul este respectat, inginerii prelevează un eșantion de 30 de fire de ață și măsoară diametrul fiecărui fir, obținând o varianță a eșantionului de 0,0005 mm².</p>
+<p>Se poate concluziona că varianța diametrului firelor este diferită de valoarea specificată? Presupuneți că diametrul firelor de ață este normal distribuit.</p>
+<blockquote>
+<div><p>Problema 3: Precizia unui termometru medical</p>
+</div></blockquote>
+<p>Un producător de termometre dorește să se asigure că variațiile în măsurătorile termometrului sunt în limite acceptabile. Se specifică o  abatere medie pătratică  de 0,1°C a erorii de măsurare, corespunzând unei varianțe de 0,01°C². Producătorul prelevează un eșantion de 50 de termometre și măsoară variația erorii, obținând o varianță a eșantionului de 0,015°C².</p>
+<p>Verificați dacă varianța în erorile de măsurare este semnificativ diferită de cea specificată, presupunând că erorile de măsurare sunt normal distribuite.</p>
+<blockquote>
+<div><p>Problema 4: Uniformitatea grosimii sticlei produse într-o fabrică</p>
+</div></blockquote>
+<p>O fabrică de sticlă produce foi de sticlă cu grosime standardizată, unde  abatere medie pătratică  acceptată a grosimii este de 0,3 mm, ceea ce corespunde unei varianțe de 0,09 mm². Pentru a verifica consistența grosimii, se prelevează un eșantion de 25 de foi de sticlă, iar măsurătorile arată o varianță de 0,12 mm².</p>
+<p>Determină dacă varianța grosimii este semnificativ mai mare decât cea specificată, presupunând că grosimea este normal distribuită.</p>
+<blockquote>
+<div><p>Problema 5: Stabilitatea nivelului de zgomot al unui motor electric</p>
+</div></blockquote>
+<p>Un producător de motoare electrice specifică o  abatere medie pătratică  a nivelului de zgomot de 2 dB, pentru a menține un nivel de zgomot stabil și constant. Aceasta corespunde unei varianțe de 4 dB². Pentru a testa stabilitatea zgomotului, inginerii colectează un eșantion de 40 de motoare și măsoară variațiile nivelului de zgomot, obținând o varianță de 5 dB².</p>
+<p>Testați dacă varianța nivelului de zgomot este semnificativ mai mare decât valoarea specificată, având în vedere că nivelul de zgomot este normal distribuit.</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Problema 1: Stabilitatea temperaturii în două frigidere de tipuri diferite</p>
+</div></blockquote>
+<p>Un laborator de testare a electrocasnicelor dorește să compare stabilitatea temperaturii între două modele de frigidere (Model A și Model B). Frigiderele sunt setate să mențină o temperatură constantă, iar variațiile de temperatură sunt măsurate pe o perioadă de o săptămână pentru fiecare model.</p>
+<ul class="simple">
+<li><p><strong>Model A</strong>: 12 măsurători,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_1 = 0,5\)</span> °C.</p></li>
+<li><p><strong>Model B</strong>: 10 măsurători,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_2 = 0,3\)</span> °C.</p></li>
+</ul>
+<p>Laboratorul dorește să verifice dacă există o diferență semnificativă în varianțele temperaturii între cele două modele. Se presupune că  temperaturile sunt normal distribuite.</p>
+<blockquote>
+<div><p>Problema 2: Consistența timpului de răspuns a două servere de internet</p>
+</div></blockquote>
+<p>O companie de tehnologie dorește să compare consistența timpului de răspuns între două servere, Serverul X și Serverul Y. Ei monitorizează timpul de răspuns pe parcursul unei zile.</p>
+<ul class="simple">
+<li><p><strong>Serverul X</strong>: eșantion de 15 măsurători,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_1 = 0,8\)</span> secunde.</p></li>
+<li><p><strong>Serverul Y</strong>: eșantion de 20 de măsurători,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_2 = 1,1\)</span> secunde.</p></li>
+</ul>
+<p>Compania vrea să verifice dacă diferența dintre varianțele timpilor de răspuns este semnificativă, presupunând că timpii de răspuns sunt normal distribuiți.</p>
+<blockquote>
+<div><p>Problema 3: Compararea varianțelor pentru înălțimea plantelor de roșii crescute în sere diferite</p>
+</div></blockquote>
+<p>Un agronom studiază înălțimea plantelor de roșii cultivate în două sere diferite, Sera A și Sera B, pentru a observa dacă există diferențe în varianțele creșterii plantelor. El măsoară înălțimea unui eșantion de plante din fiecare seră.</p>
+<ul class="simple">
+<li><p><strong>Seră A</strong>: 18 plante,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_1 = 3,5\)</span> cm.</p></li>
+<li><p><strong>Seră B</strong>: 15 plante,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_2 = 2,8\)</span> cm.</p></li>
+</ul>
+<p>Agronomul dorește să determine dacă există o diferență semnificativă între varianțele înălțimii plantelor între cele două sere. Se presupune că înălțimile plantelor sunt normal distribuite.</p>
+<blockquote>
+<div><p>Problema 4: Variabilitatea performanței între două tipuri de combustibil pentru motoare</p>
+</div></blockquote>
+<p>O companie auto compară performanța motoarelor atunci când sunt alimentate cu două tipuri diferite de combustibil (Combustibil A și Combustibil B). Varianțele consumului de combustibil este măsurată pentru fiecare motor în cadrul unor teste de anduranță.</p>
+<ul class="simple">
+<li><p><strong>Combustibil A</strong>: 10 motoare,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_1 = 0,6\)</span> litri/100 km.</p></li>
+<li><p><strong>Combustibil B</strong>: 12 motoare,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_2 = 0,9\)</span> litri/100 km.</p></li>
+</ul>
+<p>Compania dorește să știe dacă există o diferență semnificativă între varianțele consumului pentru cele două tipuri de combustibil, presupunând că datele sunt normal distribuite.</p>
+<blockquote>
+<div><p>Problema 5: Consistența grosimii vopselei aplicate de două mașini automate</p>
+</div></blockquote>
+<p>O fabrică de produse metalice folosește două mașini automate pentru a aplica un strat de vopsea pe produsele sale. Managerul dorește să compare variabilitatea grosimii stratului de vopsea aplicat de fiecare mașină, pentru a evalua consistența între acestea.</p>
+<ul class="simple">
+<li><p><strong>Mașina 1</strong>: 16 măsurători,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_1 = 0,12\)</span> mm.</p></li>
+<li><p><strong>Mașina 2</strong>: 14 măsurători,  abaterea medie pătratică  <span class="math notranslate nohighlight">\(s_2 = 0,15\)</span> mm.</p></li>
+</ul>
+<p>Managerul dorește să determine dacă există o diferență semnificativă între varianțele grosimii stratului de vopsea aplicat de cele două mașini, presupunând că grosimea este normal distribuită.</p>
+<hr class="docutils" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-StatisticiDescriptive">Statistici descriptive</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-Probabilitati">Probabilități</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-DistributiaNormala">Distribuția normală</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-Intervale">Intervale de încredere</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-TesteIpotezaMedie">Teste de ipoteză (medii)</a></li>
+<li class="toctree-l1 toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="intro.html#document-TesteIpotezaVarianta">Teste de ipoteză (varianță)</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By LRI
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
